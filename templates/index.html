@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Pegada Hídrica 💧</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 600px; margin: 2rem auto; padding: 0 1rem; }
+    h1 { text-align: center; }
+    label { display:block; margin-top: 12px; }
+    input { width: 100%; padding: 8px; margin-top: 4px; box-sizing: border-box; }
+    button { margin-top: 16px; padding: 10px 16px; width: 100%; cursor:pointer; }
+    .tip { color: #555; font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+  <h1>💧 Calculadora de Pegada Hídrica</h1>
+  <p class="tip">Preencha os campos abaixo e clique em <strong>Calcular</strong>.</p>
+  <form action="/calcular" method="post">
+    <label>Minutos de banho por dia:
+      <input type="number" name="banho" min="0" required>
+    </label>
+    <label>Lavagens de roupa por semana:
+      <input type="number" name="roupa" min="0" required>
+    </label>
+    <label>Minutos de torneira aberta por dia:
+      <input type="number" name="torneira" min="0" required>
+    </label>
+    <button type="submit">Calcular</button>
+  </form>
+</body>
+</html>
